@@ -1,0 +1,123 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+nlp/  # conda environment folder nếu có
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# Dataset files (rất lớn)
+data/
+*.arrow
+*.parquet
+*.tsv
+*.csv
+!data/.gitkeep  # Giữ folder structure
+
+# Cached datasets
+.cache/
+~/.cache/
+cache/
+
+# HuggingFace cache
+~/.cache/huggingface/
+.cache/huggingface/
+
+# Model files (rất lớn)
+models/
+results/
+*.pkl
+*.joblib
+*.bin
+*.pt
+*.pth
+*.h5
+*.hdf5
+*.ckpt
+checkpoint*/
+
+# VnCoreNLP
+vncorenlp/
+*.jar
+
+# PhoBERT/SentenceTransformers cache
+sentence-transformers/
+transformers/
+
+# Output files
+outputs/
+summaries/
+figs/
+plots/
+*.png
+*.jpg
+*.pdf
+
+# Logs
+logs/
+*.log
+wandb/
+tensorboard/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Configuration files with secrets
+config.json
+secrets.json
+.env.local
+.env.production
+
+# Large text files
+*.txt
+!requirements.txt
+!README.txt
