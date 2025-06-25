@@ -14,9 +14,9 @@ class TfidfPositionScorer:
 
     def score(self, sentences):
         vecs = self.vect.transform(sentences)
-        centroid = vecs.mean(axis=0)
+        centroid = vecs.mean(axis=0) # trung tâm của các câu (topic của bài viết)
         cos = cosine_similarity(vecs, centroid)
-        pos = np.expand_dims(1 / (np.arange(len(sentences)) + 1), 1)
+        pos = np.expand_dims(1 / (np.arange(len(sentences)) + 1), 1) # tầm quan trọng của vị trí câu
         return (cos + self.lambda_pos * pos).ravel()
 
 
@@ -59,6 +59,9 @@ def load_scorer(name: str):
 
 
 def eliminate_redundancy(ranked_idx, sentences, top_k=3, threshold=0.8):
+    """
+    Giữ lại các câu không trùng lặp trong danh sách đã xếp hạng.
+    """
     chosen = []
     emb_cache = None
     for idx in ranked_idx:
